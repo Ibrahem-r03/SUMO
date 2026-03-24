@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Killua - Workflow</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+  h1 { text-align:center; margin-bottom:30px; }
+  .flow-box {
+    background: #e3e3e3;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .flow-box.start { background: #84fab0; }
+  .flow-box.sensor { background: #a8edea; }
+  .flow-box.wait { background: #fcd5ce; }
+  .flow-box.decision { background: #ffecd2; }
+  .flow-box.action { background: #e0c3fc; }
+  .flow-box.learning { background: #fa709a; }
+  .flow-box.save { background: #30cfd0; color: white; }
+  .arrow {
+    width: 0; height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #666;
+    margin: 10px auto;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🤖 Killua - Workflow</h1>
+
+<div class="flow-box start">
+  <h3>🚀 البداية (Setup)</h3>
+  <p>تهيئة المحركات والمستشعرات<br>تحميل الذكاء المحفوظ من EEPROM</p>
+</div>
+<div class="arrow"></div>
+
+<div class="flow-box wait">
+  <h3>⏳ انتظار 5 ثوانٍ</h3>
+  <p>القراءة والتقييم مستمر<br>لكن الحركة لا تبدأ</p>
+</div>
+<div class="arrow"></div>
+
+<div class="flow-box sensor">
+  <h3>📡 قراءة المستشعرات</h3>
+  <p>3 مستشعرات مسافة + 4 مستشعرات خط<br>حساب زاوية العدو</p>
+</div>
+<div class="arrow"></div>
+
+<div class="flow-box decision">
+  <h3>⚠️ فحص الحافة</h3>
+  <p>هل هناك حافة؟</p>
+</div>
+<div class="arrow"></div>
+
+<div class="flow-box action">
+  <h3>🧠 اتخاذ القرار الذكي</h3>
+  <p>ε-greedy أو اختيار أفضل فعل من 6</p>
+</div>
+<div class="arrow"></div>
+
+<div class="flow-box action">
+  <h3>⚡ تنفيذ الفعل</h3>
+  <p>التحكم بالمحركات (PWM)<br>تنفيذ الحركة المختارة</p>
+</div>
+<div class="arrow"></div>
+
+<div class="flow-box learning">
+  <h3>📈 التعلم والتحسين</h3>
+  <p>حساب المكافأة، تحديث الأوزان، تقليل ε</p>
+</div>
+<div class="arrow"></div>
+
+<div class="flow-box save">
+  <h3>💾 حفظ دوري</h3>
+  <p>حفظ الأوزان والإحصائيات في EEPROM</p>
+</div>
+<div class="arrow"></div>
+
+<div style="text-align:center; margin-top:20px;">
+  <div style="display:inline-block; padding:10px 20px; background:#666; color:white; border-radius:10px;">
+    🔄 العودة إلى قراءة المستشعرات
+  </div>
+</div>
+
+</div>
+</body>
+</html>
